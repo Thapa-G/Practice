@@ -1,0 +1,311 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "070ab9b7-d15a-427c-a138-514ff299d176",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "numbers=[1,2,3,4,5]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "3d36d5ad-1eeb-421c-92fa-7d3eea70c16b",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "a5d8d909-4842-418d-831a-2badd7f43f7e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "square=list(map(lambda x: x**2,numbers))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "c8c508e7-b509-447c-9706-5ffaaf731f68",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[1, 4, 9, 16, 25]"
+      ]
+     },
+     "execution_count": 4,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "square"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "b504890f-eef1-48f0-a08d-b251ec41402a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def funnction1(x):\n",
+    "    return x**2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "bc044cb8-be11-4f07-97be-338aac1375d8",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "squares=list(map(funnction1, numbers))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "275d47e6-da5f-4910-bde7-ae08f2ac1e83",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[1, 4, 9, 16, 25]"
+      ]
+     },
+     "execution_count": 13,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "squares "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "e6cad28d-0d8e-473f-9aa2-8a4d2f216742",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[2, 4, 6, 8, 10]\n"
+     ]
+    }
+   ],
+   "source": [
+    "num=[1,2,3,4,5,6,7,8,9,10]\n",
+    "even_numbers = list(filter(lambda x : x%2 == 0 , num))\n",
+    "print(even_numbers)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "56de1d4d-e9db-4ebf-acc4-a831c922e0af",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def evenfun(x):\n",
+    "    return x%2==0"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "9c3c12cb-5086-4d90-8d1b-e4e8e8dcf76c",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[2, 4, 6, 8, 10]"
+      ]
+     },
+     "execution_count": 19,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "aas=list(filter(evenfun,num))\n",
+    "aas"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "d9497a15-b425-45c7-9e40-bd32c7487aec",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# reduce\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "0ee924da-700d-4152-acad-ee71cf9831d1",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from functools import reduce "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "63461cef-9c65-4d2f-a5c1-866a3bf8ff74",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "nums=[1,2,3,4,5,6,7,8,9,0,11]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "e877f5f3-9f7e-4ea0-b552-1e7c736bb6ed",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "15\n"
+     ]
+    }
+   ],
+   "source": [
+    "# first x=1 and y=2 the x+y i.e 3 is stored in x\n",
+    "# then next time x=3 and y= 3 and goes on\n",
+    "\n",
+    "\n",
+    "sum= reduce(lambda x,y:x+y,numbers)\n",
+    "print(sum)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "dc9e86fe-697a-44bb-b06a-4d7e05508647",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import os"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "id": "4282460d-5d24-47eb-b899-347852eece93",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "current_dir=os.getcwd()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "id": "8a9adf18-ba28-47d7-bbcb-315d681577c0",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "files=os.listdir(current_dir)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "id": "bbe98d5d-b377-4982-ada1-ea5440c43557",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['.git', '.ipynb_checkpoints', 'callinfmodule.py', 'Condition_recursion.py', 'data.csv', 'data1.csv', 'Dictionary.py', 'file_handelling.py', 'file_reader.py', 'file_task.py', 'function.py', 'function_add.py', 'inheritance.py', 'input.csv', 'List.py', 'Loan Approval.csv', 'loop.py', 'matplotlib.py', 'modeltaskcalling.py', 'module.py', 'moduletask.py', 'Operators.py', 'pandas.ipynb', 'set.py', 'Strring.py', 'tuple.py', 'Untitled.ipynb', 'Untitled1.ipynb', '__pycache__']\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(files)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 37,
+   "id": "78502dcd-befc-41e7-8d3c-3f8589c87600",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import random\n",
+    "listt=[1,2,3,4,5,6,7,8,9]\n",
+    "random.shuffle(listt)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 38,
+   "id": "cbe87b81-44ac-4299-a1ac-c772ed43bc8b",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[9, 8, 1, 5, 7, 3, 2, 4, 6]"
+      ]
+     },
+     "execution_count": 38,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "listt"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "f1334349-6498-4e6b-88cd-4c7139a9d107",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
